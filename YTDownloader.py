@@ -1,5 +1,3 @@
-from operator import truediv
-from posixpath import basename
 from pytube import YouTube
 from pytube import Playlist
 
