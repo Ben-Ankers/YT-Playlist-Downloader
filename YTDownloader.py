@@ -10,7 +10,6 @@ def downloadPlaylist(playlist, musicFile, downloadDestination, musicList):
 
     for url in playlist.video_urls:
         yt = YouTube(url)
-        #dl = yt.streams.get_highest_resolution()
         hasFile = False
 
         with open(musicList, 'r') as file:
@@ -44,10 +43,6 @@ def main():
 
     musicFile = open(musicList,'a')
 
-    ytPlaylist = Playlist('https://www.youtube.com/playlist?list=PLiB4gGXb4mNJOgroZ3ZjYI_PJvnUvk3y4')
-
-    #downloadPlaylist(ytPlaylist, musicFile, downloadPath, musicList)
-
     if userInput == "1":
         while hasValidLink == False:
             youtubeURL = input("Paste a youtube URL to download: ")
@@ -59,7 +54,7 @@ def main():
     
     if userInput == "2":
         while hasValidLink == False:
-            youtubeURL = input("Paste a youtube URL to download: ")
+            youtubeURL = input("Paste a Playlist URL to download: ")
             try:
                 downloadPlaylist(Playlist(youtubeURL) , musicFile, downloadPath, musicList)
                 hasValidLink = True
