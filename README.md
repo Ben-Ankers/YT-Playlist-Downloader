@@ -6,5 +6,5 @@ This application makes use of pytube to make the downloading of individual video
 ----------------------TODO----------------------
 
 1. Add an interface so users can easily change which playlist they want to download
-2. Add the option to either do individual videos or playlists
-3. Make it look better
+2. Make it look better
+3. Clean up code
